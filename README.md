@@ -26,9 +26,6 @@ No `.mp3` or `.wav` files are included.
 
 ---
 
-## 🎬 Demo
-
-
 
 ## Requirements
 
