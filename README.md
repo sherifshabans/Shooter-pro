@@ -133,8 +133,9 @@ val paint = Paint().apply { textSize = size }
 Canvas(bitmap).drawText(text, x, y, paint)
 
 val texture = Texture(pixmapFromBitmap(bitmap))
-
-Dependencies
+```
+---
+## Dependencies
 
 
 val gdxVersion = "1.12.1"
@@ -190,12 +191,11 @@ tasks.register("extractNatives") {
             }
         }
     }
-}
-
-Build Hook
+}```
+## Build Hook
 
 The extraction task runs automatically before the Android build process.
-
+```
 afterEvaluate {
     tasks.matching { it.name.startsWith("merge") && it.name.contains("JniLibFolders") }
         .configureEach {
@@ -207,12 +207,11 @@ afterEvaluate {
             dependsOn("extractNatives")
         }
 }
-
+```
 This ensures the correct native libraries are available for all supported ABIs during compilation.
 
 
-
-MIT License
+## MIT License
 Free to use and modify with attribution.
 
 1. Open the project in **Android Studio**
