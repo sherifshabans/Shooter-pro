@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0A0B10"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center_horizontal">
+
+        <!-- ── مسافة علوية ── -->
+        <View android:layout_width="match_parent" android:layout_height="32dp"/>
+
+        <!-- ── عنوان اللعبة ── -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SHOOTER PRO"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            android:textColor="#E06030"
+            android:letterSpacing="0.12"
+            android:fontFamily="monospace"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="لعبة إطلاق نار ثنائية الأبعاد"
+            android:textSize="16sp"
+            android:textColor="#8899BB"
+            android:layout_marginTop="4dp"/>
+
+        <!-- ── فاصل ── -->
+        <View
+            android:layout_width="180dp"
+            android:layout_height="2dp"
+            android:background="#1E2A45"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- ── بطاقة اسم اللاعب ── -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardBackgroundColor="#111827"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            xmlns:app="http://schemas.android.com/apk/res-auto">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="👤  مرحباً، "
+                    android:textSize="16sp"
+                    android:textColor="#6688AA"/>
+
+                <TextView
+                    android:id="@+id/tvPlayerName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="مقاتل"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#CCDDFF"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- ── بطاقة الإحصائيات ── -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="28dp"
+            app:cardBackgroundColor="#111827"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            xmlns:app="http://schemas.android.com/apk/res-auto">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="20dp">
+
+                <!-- أعلى نقطة -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="أعلى نقطة"
+                        android:textSize="12sp"
+                        android:textColor="#556688"
+                        android:layout_marginBottom="4dp"/>
+
+                    <TextView
+                        android:id="@+id/tvHighScore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🏆  0"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        android:textColor="#FFB020"/>
+
+                </LinearLayout>
+
+                <!-- فاصل رأسي -->
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="#1E2A45"
+                    android:layout_marginHorizontal="8dp"/>
+
+                <!-- عدد المباريات -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="المباريات"
+                        android:textSize="12sp"
+                        android:textColor="#556688"
+                        android:layout_marginBottom="4dp"/>
+
+                    <TextView
+                        android:id="@+id/tvGamesPlayed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🎮  0 مباراة"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        android:textColor="#4488EE"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- ── زر العب الآن ── -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardBackgroundColor="#C04010"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp"
+            xmlns:app="http://schemas.android.com/apk/res-auto">
+
+            <LinearLayout
+                android:id="@+id/btnPlay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="20dp"
+                android:gravity="center"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="▶  العب الآن"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- ── زر كيف تلعب ── -->
+        <LinearLayout
+            android:id="@+id/btnHowTo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="14dp"
+            android:gravity="center"
+            android:background="@drawable/btn_outline"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="❓  كيف تلعب؟"
+                android:textSize="16sp"
+                android:textColor="#8899BB"/>
+
+        </LinearLayout>
+
+        <!-- ── بطاقة كيف تلعب (مخفية) ── -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardHowTo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:visibility="gone"
+            app:cardBackgroundColor="#0E1420"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            xmlns:app="http://schemas.android.com/apk/res-auto">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🕹️  التحكم"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#CCDDFF"
+                    android:layout_marginBottom="12dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="• الحركة: جويستيك في نصف الشاشة الأيسر\n• الإطلاق: اضغط في نصف الشاشة الأيمن\n• Dash: زر في أسفل اليسار\n• تغيير السلاح: زر في أعلى اليمين\n• القنبلة: زر في أسفل اليمين"
+                    android:textSize="14sp"
+                    android:textColor="#7788AA"
+                    android:lineSpacingMultiplier="1.6"
+                    android:layout_marginBottom="16dp"/>
+
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#1E2A45" android:layout_marginBottom="16dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="⚔️  الأعداء"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#CCDDFF"
+                    android:layout_marginBottom="12dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="• Grunt: عسكري عادي، سريع، ضعيف\n• Heavy: بطيء لكن دروعه ضخمة\n• Sniper: يطلق من بعيد بدقة عالية\n• Flanker: سريع جداً ويتسلل\n• Boss: موجة 5، 3 مراحل، الأصعب"
+                    android:textSize="14sp"
+                    android:textColor="#7788AA"
+                    android:lineSpacingMultiplier="1.6"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- ── تفاصيل اللعبة ── -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="5 موجات  ·  4 أسلحة  ·  قنابل  ·  5 أنواع أعداء"
+            android:textSize="13sp"
+            android:textColor="#334455"
+            android:gravity="center"
+            android:layout_marginBottom="32dp"/>
+
+    </LinearLayout>
+</ScrollView>
