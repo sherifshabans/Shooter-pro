@@ -214,11 +214,8 @@ This ensures the correct native libraries are available for all supported ABIs d
 ## MIT License
 Free to use and modify with attribution.
 
-1. Open the project in **Android Studio**
 
-File → Open → Select ShooterPro folder
-
-Technical Highlights
+## Technical Highlights
 - Procedural audio generation
 - Code-only graphics using ShapeRenderer
 - Custom Arabic text rendering workaround
